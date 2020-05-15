@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="EditCustomView">
+        <attr name="icon" format="reference" />
+        <attr name="hint" format="reference|string" />
+    </declare-styleable>
+
+</resources>

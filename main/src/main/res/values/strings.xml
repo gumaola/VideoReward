@@ -1,0 +1,125 @@
+<resources>
+
+    <string name="common_error">获取网络信息错误，请重试</string>
+    <string name="common_info_error">请填写正确信息</string>
+
+    <string name="comments">评论</string>
+    <string name="favor">喜欢</string>
+    <string name="share">转发</string>
+
+    <string name="save">保存</string>
+
+    <string name="redeem">兑换</string>
+
+    <string name="yes">确定</string>
+
+    <string name="name">姓名</string>
+    <string name="idcode">身份证号</string>
+    <string name="birthplace">籍贯</string>
+
+    <string name="no_permission">你还没有权限使用此功能哦～</string>
+
+    <string name="login_more_video">更多短视频</string>
+    <string name="login_just_here">就在这里</string>
+
+
+    <string name="login_phone_hint">登陆账号</string>
+    <string name="login_password_hint">输入密码</string>
+
+    <string name="login_forget_password">忘记密码?</string>
+    <string name="login_login_now">立即登陆</string>
+    <string name="login_register_now">立即注册</string>
+
+
+    <string name="register_phone_hint">请输入手机号码</string>
+    <string name="register_password_hint">请设置密码</string>
+    <string name="register_confirm_password_hint">请确认密码</string>
+    <string name="register_invite_code_hint">请输入邀请码</string>
+
+    <string name="register_phone_error">请输入正确手机号</string>
+    <string name="register_psw_error">请输入正确密码</string>
+    <string name="register_psw_no_match">两次输入密码不匹配</string>
+    <string name="register_invite_code">请输入正确邀请码</string>
+
+    <string name="register_successful">注册成功，请登录</string>
+
+    <string name="home_main">首页</string>
+    <string name="home_tribe">部落</string>
+    <string name="home_message">消息</string>
+    <string name="home_me">我的</string>
+
+    <string name="edit_info">编辑信息</string>
+    <string name="follow">关注</string>
+    <string name="followed">已关注</string>
+    <string name="money">提现</string>
+    <string name="ID">ID号: %s</string>
+    <string name="female">女</string>
+    <string name="male">男</string>
+    <string name="in_secret">保密</string>
+    <string name="balance">当前金币余额</string>
+    <string name="fan">粉丝</string>
+    <string name="my_video">作品</string>
+    <string name="favor_video">喜欢</string>
+    <string name="favored">获赞</string>
+
+    <string name="not_real_name">未实名认证</string>
+    <string name="real_nameed">身份证：%s</string>
+
+    <string name="no_desc_other">此人很懒，没有简介哦～</string>
+    <string name="no_desc_my">快去填写你的简介吧～</string>
+
+    <string name="edit_change_avatar">点击更换头像</string>
+    <string name="edit_name">名字</string>
+    <string name="edit_id">账号</string>
+    <string name="edit_desc">简介</string>
+    <string name="edit_location">地区</string>
+    <string name="edit_gender">性别</string>
+    <string name="edit_birthday">生日</string>
+    <string name="edit_real">实名认证</string>
+    <string name="edit_logout">退出登录</string>
+
+    <string name="home_tribe_no_billing">还没有订单哦～</string>
+    <string name="billing_status_complete">已完成</string>
+    <string name="billing_status_uncomplete">正在进行</string>
+    <string name="billing_id">订单ID号：%s</string>
+
+    <string name="level_cost">兑换所需：%d金币</string>
+    <string name="level_reward">完成收益：%1d金币 + %2d%%</string>
+    <string name="level_detail">铭文详情  ></string>
+    <string name="level_reward_percent">收益百分比：%d%%</string>
+    <string name="level_reward_day">收益时间：%d天</string>
+
+    <string name="level_up_success">恭喜你升级成功！</string>
+
+    <string name="setting">设置</string>
+    <string name="invite">邀请好友</string>
+    <string name="my_invite">我的邀请</string>
+    <string name="my_follow">我的关注</string>
+    <string name="my_fans">我的粉丝</string>
+    <string name="modify_psw">修改密码</string>
+    <string name="modify_billing_psw">修改提现密码</string>
+    <string name="version">当前版本：%s</string>
+
+    <string name="input_coin">输入金币：</string>
+    <string name="withdraw_cost">手续费 ¥ %s</string>
+    <string name="input_coin_hint">输入提现金币</string>
+    <string name="set_billing_psw">设置提现密码</string>
+    <string name="confirm_billing_psw">确认提现密码</string>
+
+    <string name="withdraw_success">提现完成，请注意查收！</string>
+
+    <string name="modify_psw_success">密码设置成功！</string>
+
+    <string name="video_upload_success">视频上传成功，审核后即可看到</string>
+
+
+    <string name="certificate_tip">你还没有实名认证</string>
+    <string name="certificate_success">实名认证审核中，请您耐心等待！</string>
+    <string name="no_comment">还没有评论哦，快来抢沙发吧～</string>
+
+    <string name="comment_success">作者已经收到你的评论喽～</string>
+
+    <string name="comment_hint">有爱评论，说点好听的～</string>
+
+
+</resources>

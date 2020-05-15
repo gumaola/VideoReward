@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/level_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="7dp"
+    android:background="@drawable/shape_level_bg"
+    android:padding="13dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/level_detail_thumb"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:scaleType="centerCrop"
+        android:background="@mipmap/icon_avatar_placeholder"
+        app:riv_corner_radius="23dp" />
+
+    <TextView
+        android:id="@+id/level_detail_title"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="30dp"
+        android:layout_toRightOf="@id/level_detail_thumb"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/level_detail_percent_root"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/level_detail_title"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@mipmap/ico_level_percent" />
+
+        <TextView
+            android:id="@+id/level_detail_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#A2A19F"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/level_cost_root"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/level_detail_percent_root"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@mipmap/ico_level_cost" />
+
+        <TextView
+            android:id="@+id/level_detail_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#A2A19F"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/level_detail_day_root"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/level_cost_root"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@mipmap/ico_level_reward" />
+
+        <TextView
+            android:id="@+id/level_detail_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#A2A19F"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</RelativeLayout>

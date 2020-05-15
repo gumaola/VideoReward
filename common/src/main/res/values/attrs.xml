@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleProgress">
+        <attr name="cp_stroke_width" format="dimension" />
+        <attr name="cp_bg_color" format="color" />
+        <attr name="cp_fg_color" format="color" />
+        <attr name="cp_max_progress" format="float" />
+        <attr name="cp_cur_progress" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="ArcImageView">
+        <attr name="arcHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="VerificationCodeEditText">
+        <attr name="codeTextColor" format="color" />
+        <attr name="codeTextSize" format="dimension" />
+        <attr name="password" format="boolean" />
+    </declare-styleable>
+
+</resources>

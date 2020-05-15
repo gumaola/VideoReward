@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_dark">
+
+    <ImageView
+        android:id="@+id/modify_back"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:src="@mipmap/ico_back_gray" />
+
+    <TextView
+        android:id="@+id/modify_title"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/edit_info"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/modify_save"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="@string/save"
+        android:textColor="@color/redTab"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/modify_title_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/modify_title"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_app_divide" />
+
+    <include
+        android:id="@+id/modify_name_root"
+        layout="@layout/layout_modify_name"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/modify_title_line"
+        android:layout_marginTop="15dp"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/modify_desc_root"
+        layout="@layout/layout_modify_desc"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_below="@id/modify_title_line"
+        android:layout_marginTop="15dp" />
+
+</RelativeLayout>

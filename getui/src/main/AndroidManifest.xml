@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.nano.getui">
+
+    <application>
+
+        <service
+            android:name=".GetuiPushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice" />
+    </application>
+
+</manifest>

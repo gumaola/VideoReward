@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/bg_person_info_header" />
+
+    <ImageView
+        android:id="@+id/person_info_back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:src="@mipmap/ico_back_gray" />
+
+    <ImageView
+        android:id="@+id/person_info_setting"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+        android:background="@mipmap/ico_setting" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/person_info_avatar"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="113dp"
+        android:src="@mipmap/icon_avatar_placeholder"
+        app:riv_corner_radius="43dp" />
+
+    <TextView
+        android:id="@+id/person_info_edit"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="165dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_edit_info_bg"
+        android:gravity="center"
+        android:text="@string/edit_info"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/person_info_follow"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="165dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_follow_bg"
+        android:gravity="center"
+        android:text="@string/follow"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/person_info_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/person_info_avatar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/person_info_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/person_info_name"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/person_info_real"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/person_info_id"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:text="未实名认证"
+        android:textColor="#79797A"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/person_info_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/person_info_real"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/no_desc_my"
+        android:textColor="#79797A"
+        android:textSize="13sp" />
+
+    <View
+        android:id="@+id/person_info_line1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/person_info_desc"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_app_text_subtitle" />
+
+    <LinearLayout
+        android:id="@+id/person_info_gender_root"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/person_info_line1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_app_text_subtitle"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/person_info_gender_icon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@mipmap/ico_female" />
+
+        <TextView
+            android:id="@+id/person_info_gender_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="保密"
+            android:textColor="#BFBDBD"
+            android:textSize="13sp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/person_info_location_text"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignTop="@id/person_info_gender_root"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/person_info_gender_root"
+        android:background="@color/color_app_text_subtitle"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="保密"
+        android:textColor="#BFBDBD"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:id="@+id/person_info_balance_title"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/person_info_gender_root"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/balance"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/ico_balance" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/person_info_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/person_info_balance_title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/person_info_get_money"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/person_info_balance_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_get_money_bg"
+        android:gravity="center"
+        android:text="@string/money"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/person_info_fans_root"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/person_info_balance"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:id="@+id/person_info_follow_count_root"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/person_info_follow_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/follow"
+                android:textColor="#BFBDBD"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/person_info_fans_count_root"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/person_info_fans_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fan"
+                android:textColor="#BFBDBD"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/person_info_favor_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/favored"
+                android:textColor="#BFBDBD"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/person_info_fans_root"
+        android:layout_marginTop="20dp"
+        android:divider="@color/color_app_divide_dark"
+        android:dividerPadding="1dp"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/home_me_tab_my_video"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/my_video"
+            android:textColor="@drawable/selector_home_me_tab"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/home_me_tab_favor_video"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/favor_video"
+            android:textColor="@drawable/selector_home_me_tab"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+</RelativeLayout>

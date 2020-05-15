@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_dark">
+
+    <ImageView
+        android:id="@+id/setting_back"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:onClick="goback"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:src="@mipmap/ico_back_gray" />
+
+    <TextView
+        android:id="@+id/setting_title"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/setting"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/modify_title_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/setting_title"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_app_divide" />
+
+    <RelativeLayout
+        android:id="@+id/setting_my_invite_root"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/modify_title_line"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:onClick="goToMyInvite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/my_invite"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text=">"
+            android:textColor="#A8AEBD"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setting_invite_root"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/setting_my_invite_root"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:onClick="goToInvite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/invite"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text=">"
+            android:textColor="#A8AEBD"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setting_modify_psw_root"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/setting_invite_root"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:onClick="modifyPsw">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/modify_psw"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text=">"
+            android:textColor="#A8AEBD"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setting_modify_billing_psw_root"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/setting_modify_psw_root"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:onClick="modifyBillingPsw">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/modify_billing_psw"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text=">"
+            android:textColor="#A8AEBD"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/setting_logout"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/setting_modify_billing_psw_root"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/shape_log_out"
+        android:gravity="center"
+        android:onClick="loginOut"
+        android:text="@string/edit_logout"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/setting_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/color_app_text_subtitle"
+        android:textSize="14sp" />
+
+</RelativeLayout>

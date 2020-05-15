@@ -1,0 +1,84 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/color_app_background</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/RightInAndOutAnime</item>
+    </style>
+
+
+    <!-- dialog对话框-->
+    <style name="dialog" parent="AppTheme">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">#00000000</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <!--显示区域以外是否使用黑色半透明背景-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- 全屏fullscreen，大部分activity需要设置这个主题-->
+    <style name="Theme_Full_Screen" parent="AppTheme.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- 当某些界面需要输入框，UI 组件需要随着键盘弹出而弹出-->
+    <style name="Theme_has_notification_bar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <!--<item name="android:windowTranslucentNavigation">true</item>//这个属性居然会导致键盘无法将布局顶上去-->
+        <item name="android:statusBarColor">#300c0c0c</item>
+    </style>
+
+    <style name="transparent_activity" parent="Theme_Full_Screen">
+        <item name="android:windowBackground">#00000000</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+
+    <!-- 自定义的webview需要的参数 -->
+    <style name="titlestyle">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="toolBar">
+        <item name="colorControlNormal">#333333</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_title_back_black</item>
+        <item name="android:titleTextStyle">@style/titlestyle</item>
+    </style>
+
+    <!-- 控制Activity打开关闭动画 -->
+    <style name="RightInAndOutAnime" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/anime_right_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/anime_right_out</item>
+    </style>
+
+    <!-- 输入验证码的style -->
+    <style name="v_cursor">
+        <item name="android:layout_width">2dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="v_code_tv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_border_bottom_gold</item>
+    </style>
+
+</resources>

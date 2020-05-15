@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/home_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/empty_bottom_tab_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_dark"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:id="@+id/home_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/home_main_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ico_home_disable" />
+
+            <TextView
+                android:id="@+id/home_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="@string/home_main"
+                android:textColor="@color/color_text_disable"
+                android:textSize="@dimen/app_text_size_min" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_tribe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/home_tribe_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ico_tribe_disable" />
+
+            <TextView
+                android:id="@+id/home_tribe_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="@string/home_tribe"
+                android:textColor="@color/color_text_disable"
+                android:textSize="@dimen/app_text_size_min" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/home_take_photo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:background="@mipmap/ico_take_photo" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/home_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/home_message_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ico_message_disable" />
+
+            <TextView
+                android:id="@+id/home_message_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="@string/home_message"
+                android:textColor="@color/color_text_disable"
+                android:textSize="@dimen/app_text_size_min" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_me"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/home_me_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ico_me_disable" />
+
+            <TextView
+                android:id="@+id/home_me_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="@string/home_me"
+                android:textColor="@color/color_text_disable"
+                android:textSize="@dimen/app_text_size_min" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/home_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/home_bottom"
+        android:background="@color/color_app_background" />
+
+</RelativeLayout>

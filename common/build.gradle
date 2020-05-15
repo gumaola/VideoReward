@@ -1,0 +1,74 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs', '../libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation rootProject.ext.dependencies["appcompat"]
+    implementation rootProject.ext.dependencies["recyclerview"]
+
+    //okHttp网络请求
+    api rootProject.ext.dependencies["okhttp"]
+    //gson解析json
+    api rootProject.ext.dependencies["gson"]
+    //eventbus事件总线
+    api rootProject.ext.dependencies["eventbus"]
+    annotationProcessor rootProject.ext.dependencies["eventbus-apt-plugin"]
+    //使用Glide加载图片
+    api rootProject.ext.dependencies["glide"]
+    //一个基于Glide的transformation库,拥有裁剪,着色,模糊,滤镜等多种转换效果
+    api rootProject.ext.dependencies["glide-transformations"]
+    //带圆角，边框的的ImageView
+    api rootProject.ext.dependencies["roundedimageview"]
+    //gif库，播放礼物gif用
+    api rootProject.ext.dependencies["gif-drawable"]
+    //定制web
+    api rootProject.ext.dependencies["agentweb"]
+    api rootProject.ext.dependencies["tkrefresh"]
+    api rootProject.ext.dependencies["agnetfilechooser"]
+    api rootProject.ext.dependencies["agentdownload"]
+    api rootProject.ext.dependencies["justondownloader"]
+
+    //图片选择库
+    api rootProject.ext.dependencies["picture_selector"]
+
+    //上拉刷新库
+    implementation rootProject.ext.dependencies["loading_view"]
+    api rootProject.ext.dependencies["refresh_recycler"]
+
+}

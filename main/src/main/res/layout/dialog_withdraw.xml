@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="340dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_level_bg"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingTop="20dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="20dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input_coin"
+            android:textColor="@color/color_app_text_subtitle"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/withdraw_input_coin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/shape_input_coin_bg"
+            android:gravity="center"
+            android:hint="@string/input_coin_hint"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <cn.nano.common.widget.VerificationCodeEditText
+        android:id="@+id/withdraw_input_psw"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        app:password="true" />
+
+
+    <TextView
+        android:id="@+id/withdraw_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/withdraw_cost"
+        android:textColor="@color/color_text_disable"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/withdraw_yes"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_login_button_color"
+        android:gravity="center"
+        android:text="@string/yes"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

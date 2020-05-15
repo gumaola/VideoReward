@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="@string/edit_desc"
+        android:textColor="#B4B3B3"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/modify_desc_editor"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="20dp"
+        android:background="#282a31"
+        android:gravity="left|top"
+        android:hint="填写个人简介更容易获取别人关注哦～"
+        android:maxLength="200"
+        android:padding="10dp"
+        android:paddingLeft="20dp"
+        android:textColor="#B4B3B3"
+        android:textColorHint="@color/color_app_text_subtitle"
+        android:textSize="14sp" />
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_app_main">#ff5673ee</color>
+    <color name="color_text_disable">#808080</color>
+
+    <color name="color_dark">#1C1F26</color>
+    <color name="color_gray">#A2A19F</color>
+
+    <drawable name="item_color">#A2A19F</drawable>
+
+
+</resources>

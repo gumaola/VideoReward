@@ -1,0 +1,10 @@
+<resources>
+
+    <style name="Theme_has_notification_bar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:statusBarColor">@color/color_app_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+</resources>

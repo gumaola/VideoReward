@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">common</string>
+    <string name="loading">加载中</string>
+
+    <string name="request_permission_error">请进入手机设置开启相应权限</string>
+
+    <string name="get_location_process">定位中…</string>
+    <string name="get_location_unknown">未知</string>
+
+</resources>

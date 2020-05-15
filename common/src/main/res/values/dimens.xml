@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_space">20dp</dimen>
+
+    <dimen name="empty_bottom_tab_height">55dp</dimen>
+    <dimen name="app_text_size_primary">14sp</dimen>
+    <dimen name="app_text_size_min">10sp</dimen>
+    <dimen name="app_text_size_max">25sp</dimen>
+</resources>

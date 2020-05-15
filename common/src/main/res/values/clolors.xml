@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="color_app_text_primary">#333333</color>
+    <color name="color_app_text_disable">#9b9b9b</color>
+    <color name="color_app_text_subtitle">#666666</color>
+
+    <color name="color_app_background">#fdfdfd</color>
+    <color name="color_app_divide">#f0f0f0</color>
+    <color name="color_app_edit_hint">#727070</color>
+
+    <color name="color_app_assist_red">#ff6464</color>
+    <color name="color_app_assist_blue">#009fe8</color>
+
+    <color name="color_chat_edit_bg">#229b9b9b</color>
+
+    <color name="color_app_divide_dark">#b0b0b0</color>
+
+    <color name="color_app_divide_light">#c0ffffff</color>
+
+
+</resources>
