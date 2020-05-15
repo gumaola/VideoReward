@@ -32,6 +32,7 @@ import cn.nano.getui.GetuiSDK;
 import cn.nano.main.R;
 import cn.nano.main.account.AccountManager;
 import cn.nano.main.constant.AppPrefs;
+import cn.nano.main.home.adapter.VideoPlayerViewHold;
 import cn.nano.main.message.HomeMessageFragment;
 import cn.nano.main.person.HomeMeFragment;
 import cn.nano.main.server.AutoLoginOutCallback;
@@ -146,6 +147,12 @@ public class HomeActivity extends CommonActivity implements View.OnClickListener
         if (mCurrentFragment instanceof HomeMainFragment) {
             ((HomeMainFragment) mCurrentFragment).pauseVideoPlayer();
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        VideoPlayerViewHold.releaseThumbs();
     }
 
     @Override

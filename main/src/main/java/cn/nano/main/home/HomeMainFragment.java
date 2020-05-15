@@ -49,6 +49,7 @@ import cn.nano.main.server.result.ConfigResult;
 import cn.nano.main.server.result.GetCoinResult;
 import cn.nano.main.server.result.VideoListResult;
 import okhttp3.Call;
+import okhttp3.Response;
 
 public class HomeMainFragment extends CommonFragment implements VideoHoldClicker, TimeCallBack, OnVideoProgressChange {
 
@@ -248,6 +249,21 @@ public class HomeMainFragment extends CommonFragment implements VideoHoldClicker
         dialog.show();
         String token = AccountManager.INSTANCE.getUserToken();
         ServerApi.getVideoList(token, new AutoLoginOutCallback<VideoListResult>() {
+            @Override
+            public VideoListResult parseNetworkResponse(Response response, int id) throws Exception {
+
+                VideoListResult result = super.parseNetworkResponse(response, id);
+//                if (result.getCode() == BaseResult.SUCCESS_CODE) {
+//                    List<VideoListResult.DataBean.VlistBean> list = result.getData().getVlist();
+//                    for (VideoListResult.DataBean.VlistBean bean : list) {
+//                        VideoPlayerViewHold.addThumbs(bean.getVInfo().getVideo_id(),
+//                                bean.getVInfo().getVideo_url());
+//                    }
+//                }
+
+                return result;
+            }
+
             @Override
             public void onResponse(VideoListResult response, int id) {
                 dialog.dismiss();

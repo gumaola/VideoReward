@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.media.MediaMetadataRetriever;
 import android.text.TextUtils;
+import android.util.SparseArray;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -17,8 +18,10 @@ import org.yczbj.ycvideoplayerlib.controller.VideoPlayerController;
 import org.yczbj.ycvideoplayerlib.inter.listener.OnCompletedListener;
 import org.yczbj.ycvideoplayerlib.inter.listener.OnProgressChangeListener;
 import org.yczbj.ycvideoplayerlib.player.VideoPlayer;
+import org.yczbj.ycvideoplayerlib.utils.VideoPlayerUtils;
 
 import java.util.HashMap;
+import java.util.List;
 
 import cn.nano.common.app.GlobalConfig;
 import cn.nano.common.glide.ImgLoader;
@@ -181,7 +184,14 @@ public class VideoPlayerViewHold extends RecyclerView.ViewHolder implements View
     private void bindVideoInfo(VideoInfo videoInfo, boolean isFrist) {
         //初始化默认图片和播放信息
         mController.setTitle(videoInfo.getVideo_title());
-        ImgLoader.display(viewContext, videoInfo.getVideo_img(), mController.imageView());
+
+        Bitmap map = videoThumbs.get(videoInfo.getVideo_id());
+        if (map != null && !map.isRecycled()) {
+            mController.imageView().setImageBitmap(map);
+        } else {
+            ImgLoader.display(viewContext, videoInfo.getVideo_img(), mController.imageView());
+        }
+
 //        mController.imageView().setImageBitmap(getNetVideoBitmap(videoInfo.getVideo_url()));
 
         mVideoPlayer.setUp(videoInfo.getVideo_url(), null);
@@ -211,23 +221,6 @@ public class VideoPlayerViewHold extends RecyclerView.ViewHolder implements View
         } else {
             favorIcon.setImageResource(R.mipmap.ico_favor_disable);
         }
-    }
-
-    public static Bitmap getNetVideoBitmap(String videoUrl) {
-        Bitmap bitmap = null;
-
-        MediaMetadataRetriever retriever = new MediaMetadataRetriever();
-        try {
-            //根据url获取缩略图
-            retriever.setDataSource(videoUrl, new HashMap());
-            //获得第一帧图片
-            bitmap = retriever.getFrameAtTime();
-        } catch (IllegalArgumentException e) {
-            e.printStackTrace();
-        } finally {
-            retriever.release();
-        }
-        return bitmap;
     }
 
     private void bindUserInfo(VideoListResult.DataBean.VlistBean.MInfoBean memberInfo) {
@@ -282,6 +275,30 @@ public class VideoPlayerViewHold extends RecyclerView.ViewHolder implements View
     public void onClick(View v) {
         if (clicker != null) {
             clicker.onClick(v, videoBean, this);
+        }
+    }
+
+
+    //储存缩略图
+    private static SparseArray<Bitmap> videoThumbs = new SparseArray<>();
+
+    public static void addThumbs(int id, String url) {
+        Bitmap map = VideoPlayerUtils.getNetVideoBitmap(url);
+        videoThumbs.put(id, map);
+    }
+
+    public static void releaseThumbs() {
+        if (videoThumbs != null) {
+            int size = videoThumbs.size();
+            Bitmap bitmap = null;
+            for (int i = 0; i < size; i++) {
+                bitmap = videoThumbs.valueAt(i);
+                if (bitmap != null) {
+                    bitmap.recycle();
+                }
+            }
+
+            videoThumbs.clear();
         }
     }
 }

@@ -19,6 +19,8 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
+import android.graphics.Bitmap;
+import android.media.MediaMetadataRetriever;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
@@ -33,6 +35,7 @@ import android.util.TypedValue;
 import android.view.WindowManager;
 
 import java.util.Formatter;
+import java.util.HashMap;
 import java.util.Locale;
 
 /**
@@ -232,6 +235,30 @@ public final class VideoPlayerUtils {
             return null;
         }
         return manager.getActiveNetworkInfo();
+    }
+
+
+    /**
+     * 获取视频第一帧截图
+     *
+     * @param videoUrl
+     * @return
+     */
+    public static Bitmap getNetVideoBitmap(String videoUrl) {
+        Bitmap bitmap = null;
+
+        MediaMetadataRetriever retriever = new MediaMetadataRetriever();
+        try {
+            //根据url获取缩略图
+            retriever.setDataSource(videoUrl, new HashMap());
+            //获得第一帧图片
+            bitmap = retriever.getFrameAtTime();
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        } finally {
+            retriever.release();
+        }
+        return bitmap;
     }
 
 
